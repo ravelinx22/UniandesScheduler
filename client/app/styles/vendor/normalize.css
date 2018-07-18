@@ -418,5 +418,6 @@ textarea {
   font: inherit; /* 2 */
 }
 
-
-@import url('~bootstrap/dist/css/bootstrap.min.css')
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+@import url('vendor/styles.css');
+@import url('~react-big-calendar/lib/css/react-big-calendar.css');

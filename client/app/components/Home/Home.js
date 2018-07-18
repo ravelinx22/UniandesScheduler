@@ -5,7 +5,6 @@ import localizer from 'react-big-calendar/lib/localizers/moment'
 import moment from 'moment';
 localizer(moment)
 
-
 class Home extends Component {
 	constructor(props) {
 		super(props);
@@ -16,22 +15,24 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div>
-				<BigCalendar
-					selectable
-					events={events}
-					defaultView={BigCalendar.Views.WEEK}
-					scrollToTime={new Date(1970, 1, 1, 6)}
-					defaultDate={new Date(2015, 3, 12)}
-					onSelectEvent={event => alert(event.title)}
-					onSelectSlot={slotInfo =>
-							alert(
-								`selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
-								`\nend: ${slotInfo.end.toLocaleString()}` +
-								`\naction: ${slotInfo.action}`
-							)
-					}
-				/>	
+			<div className="app">
+				<div className="example">
+					<BigCalendar
+						selectable
+						events={events}
+						defaultView={BigCalendar.Views.MONTH}
+						scrollToTime={new Date(1970, 1, 1, 6)}
+						defaultDate={new Date(2015, 3, 12)}
+						onSelectEvent={event => alert(event.title)}
+						onSelectSlot={slotInfo =>
+								alert(
+									`selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
+									`\nend: ${slotInfo.end.toLocaleString()}` +
+									`\naction: ${slotInfo.action}`
+								)
+						}
+					/>	
+				</div>
 			</div>
 		);
 	}

@@ -46,6 +46,10 @@
     "webpack-dev-middleware": "^3.0.1",
     "webpack-hot-middleware": "^2.21.2",
     "webpack-merge": "^4.1.2",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "bootstrap": "^3.3.5"
+  },
+  "devDependencies": {
+    "url-loader": "^1.0.1"
   }
 }

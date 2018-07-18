@@ -34,13 +34,7 @@ h4 {
 	padding: 30px;
 
 }
-.examples {
-	position: relative;
-	max-width: 1200px;
-	margin: 0 auto;
-
-}
-.example {
+.calendarApp {
 	font-size: 14px;
 	padding: 0 40px;
 	min-height: calc(80vh);
@@ -50,48 +44,15 @@ h4 {
 	margin: auto;
 
 }
-.example,
-.example > * {
+.calendarApp,
+.calendarApp > * {
 	display: flex;
 	flex-direction: column;
 
 }
-.example .rbc-calendar {
+.calendarApp .rbc-calendar {
 	flex: 1;
 	min-height: 580px;
-
-}
-.examples--list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-
-}
-.examples--list > li {
-	text-align: center;
-
-}
-.examples--list a {
-	position: relative;
-	display: inline-block;
-	text-decoration: none;
-	padding: 1.4rem 1rem;
-	white-space: nowrap;
-	border-radius: .3rem;
-
-}
-.examples--list a:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 4px;
-
-}
-.examples--list a:hover:after {
-	background-color: #3174ad;
 
 }
 .section {

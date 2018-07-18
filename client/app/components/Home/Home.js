@@ -16,7 +16,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="app">
-				<div className="example">
+				<div className="calendarApp">
 					<BigCalendar
 						selectable
 						events={events}

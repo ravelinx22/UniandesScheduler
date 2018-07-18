@@ -14,10 +14,9 @@ class Home extends Component {
 	}
 
 	componentDidMount() {
-		this.searchDepartment("ISIS");
 	}
 
-	searchDepartment(depto) {
+	_searchDepartment(depto) {
 		fetch("https://registroapps.uniandes.edu.co/oferta_cursos/api/get_courses.php?term=201820&ptrm=1&prefix=" + depto + "&campus=&attr=&attrs=",{
 			method: 'GET',
 		}).then((ans) => {
@@ -30,12 +29,26 @@ class Home extends Component {
 		});
 	}
 
+	_renderDeptos() {
+		let deptos = ["ADMI","ANTR","ARQU","ARTE","AUTO","BIOL","CBCO","CBCA","CBPC","CIDE","CPOL","CISO","CONT","DECA","DEPO","DERE","DCOM","INTL","DISE","DADM","DDER","DLIT","ECON","EDUC","EPID","EGOB","DMIN","DEMP","DIGS","DENI","EECO","EINT","FARH","FILO","FISI","GEOC","GTEL","GPUB","HIST","HART","IELE","IING","IBIO","ICYA","ISIS","IIND","IMEC","IQUI","LEGI","LENG","LITE","DPUB","MGAP","MGAD","BCOM","DGGJ","DPRO","ARTI","MGPD","HDIG","MINE","MPET","MIIA","MPCU","PSCL","MIAD","MISO","MSIN","MBIT","MART","DEIN","EMAT","MADM","MPAZ","MDER","DEPR","MDIS","MECA","EDUI","MECU","MFIN","MGEO","MHAR","MLIT","MMER","MPER","MTRI","MSCM","MIFI","DEPI","MATE","MBAE","MEDI","MBIO","MUSI","PERI","SPUB","CBIO","PSIC","QUIM","RJUR","SICO","ESIO","STRA"];
+		return deptos.map((d) => {
+			return <option value={d} key={d}>{d}</option>
+		});
+	}
+
 	render() {
 		return (
 			<div>
-				<div className="col-md-2 side">
+				<div className="col-md-3 side">
+					<div className="left-upper">
+						<select className="left-select">
+							{this._renderDeptos()}
+						</select>
+					</div>
+					<div className="left-lower">
+					</div>
 				</div>
-				<div className="col-md-10 app">
+				<div className="col-md-9 app">
 					<div className="calendarApp">
 						<BigCalendar
 							selectable

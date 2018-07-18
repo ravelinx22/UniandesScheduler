@@ -9,3 +9,18 @@
 .side {
 	height: 100vh;
 }
+
+.left-upper {
+	border-bottom: 1px solid lightgrey;
+	height: 70px;
+}
+
+.left-lower {
+	height: calc(100% - 70px);
+}
+
+.left-select {
+	margin: 20px 10px;
+	height: 30px;
+	width: calc(100% - 20px);
+}
